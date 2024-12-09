@@ -1,0 +1,148 @@
+/* General reset for body */
+body {
+    background-color: rgb(1, 1, 70);
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Ensures no extra padding */
+    display: flex; /* Centers the calculator */
+    align-items: center;
+    justify-content: center; /* Horizontal centering */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Base container for the calculator */
+#base {
+    display: flex;
+    flex-direction: column; /* Arrange rows (output and buttons) vertically */
+    justify-content: space-evenly; /* Even spacing between rows */
+    align-items: center; /* Center horizontally */
+    height: 80%; /* Adjust overall size */
+    width: 60%;
+    border: 4px solid black;
+    border-radius: 15px; /* Smooth corners */
+    background-color: rgb(150, 150, 150); /* Calculator background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 10px; /* Inner padding */
+}
+
+/* Output display */
+#output {
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stack previous and current outputs */
+    justify-content: space-between;
+    width: 88%;
+    height: 10%;
+    border: 4px solid black;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.584); /* Dark gray background */
+    padding: 10px; /* Inner spacing */
+    font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+/* Previous operation text */
+#previous {
+    text-align: right; /* Align text to the right */
+    font-size: 2.5vh; /* Scales with viewport height */
+    color: white;
+    height: 40%; /* Takes 40% of the #output height */
+    overflow: hidden; /* Prevents overflow if the text is too long */
+}
+
+/* Current output text */
+#out {
+    text-align: right; /* Align text to the right */
+    font-size: 4vh; /* Larger font for the main output */
+    color: white;
+    height: 60%; /* Takes 60% of the #output height */
+    overflow: hidden; /* Prevents overflow */
+}
+
+/* AC and DEL buttons container */
+#accontainer {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space between buttons */
+    width: 94%; /* Match #output width */
+    height: 10%;
+}
+
+/* AC and DEL buttons */
+.ACDEL {
+    width: 47%; /* Equal width for two buttons */
+    height: 100%;
+    border: 4px solid black;
+    border-radius: 10px;
+    background-color: whitesmoke; /* Light gray */
+    font-size: 3vh; /* Scales with viewport height */
+    display: flex; /* Center text */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.ACDEL:hover {
+    background-color: #bcbcbc; /* Darker gray on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.ACDEL:active {
+    background-color: #a6a6a6; /* Even darker gray */
+    transform: scale(0.95); /* Shrinks on press */
+}
+
+/* Button row container */
+#container {
+    display: flex; /* Flexbox for alignment */
+    justify-content: space-between; /* Space evenly between buttons */
+    width: 94%;
+    height: 15%;
+}
+
+/* Numeric buttons */
+.button {
+    width: 22%; /* Adjust width */
+    height: 100%;
+    border: 4px solid black;
+    border-radius: 10px;
+    background-color: chocolate;
+    font-size: 3vh; /* Scales with viewport */
+    display: flex; /* Center text */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.button:hover {
+    background-color: #bcbcbc;
+    transform: scale(1.05);
+}
+
+.button:active {
+    background-color: #a6a6a6;
+    transform: scale(0.95);
+}
+
+/* Operator buttons */
+.opbutton {
+    width: 22%;
+    height: 100%;
+    border: 4px solid black;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    font-size: 3vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.opbutton:hover {
+    background-color: #bcbcbc;
+    transform: scale(1.05);
+}
+
+.opbutton:active {
+    background-color: #a6a6a6;
+    transform: scale(0.95);
+}
